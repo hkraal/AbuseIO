@@ -117,7 +117,7 @@ always use the MTA address to validate your work!
 ### Postfix
  
 ```bash
-echo 'notifier: | "| /usr/bin/php -q /opt/abuseio/artisan --env=production receive:email"' >> /etc/aliasses
+echo 'notifier: "| /usr/bin/php -q /opt/abuseio/artisan --env=production receive:email"' >> /etc/aliases
 newaliases
 ```
 
@@ -279,3 +279,4 @@ at the configured intervals from the main configuration. Example:
 crontab -e -u abuseio
 * * * * * php /opt/abuseio/artisan schedule:run >> /dev/null 2>&1
 ```
+
